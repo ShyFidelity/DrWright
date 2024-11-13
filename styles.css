@@ -9,6 +9,11 @@
   --background-color: #f5f5f5;
   --text-color: #333333;
   --dark-bg: #2f0254;
+  --leopard:url(./assets/leopard.svg);
+  --leopardOpacity:url(./assets/leopard-opacity.svg);
+  --leopardCorner:url(./assets/leopard-cornersm.svg);
+
+
 }
 
 
@@ -44,7 +49,13 @@
   width: 100vw;
 }
 
-
+.leopard {
+  padding: 2rem;
+  background-image: var(--leopardOpacity);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 
 .nav-parent {
   display: flex;
@@ -53,12 +64,15 @@
   width: 100%;
   box-shadow: 0px 4px 11px 3px #2f025427 ;
   position: sticky;
+  background-image: var(--leopardCorner);
+  background-repeat: no-repeat;
+  background-position: right;
 
 }
 
   nav {
     width: 100%;
-    padding: 2rem;
+    padding: 1.3rem;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -108,8 +122,26 @@ nav ul li a:hover {
     text-align: left;
   }
 
+  .h-light {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: left;
+    color: white;
+  }
 
 
+p {
+  font-family: "Comfortaa", sans-serif;
+
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
 .logo {
   width: 160px;
   height: 160px;
@@ -147,7 +179,7 @@ position: absolute;
 }
 
 .center-space {
-  padding: 4rem;
+  padding: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,15 +187,72 @@ position: absolute;
   text-align: center;
 }
 
-.h1 {
+h1 {
   font-family: "Comfortaa", sans-serif;
   text-align: center;
   font-size: 2rem;
   color: var(--secondary-color);
 }
 
+
 h2 {
+  font-family: "Comfortaa", sans-serif;
+
   font-weight: 300;
   color: var(--secondary-color);
 
+}
+
+
+
+
+
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 450px;
+  max-height: 450px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(28, 3, 69, 0.259);
+  transition: ease-in-out 300s;
+  border:5px #2f0254 solid;
+  border-radius: 10px;
+}
+
+/* Carousel images */
+.carousel img {
+  width: 100%;
+  position: absolute;
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Show the active image */
+.carousel img.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Navigation buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(56, 14, 86, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }

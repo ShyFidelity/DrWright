@@ -12,24 +12,28 @@
       <div class="logo-div">
         <img class="logo" src="./assets/Pediatric-logo.svg" alt="" />
       </div>
-
+<div style="display: flex; flex-direction: column; align-items: center; margin-left: 150px;">
       <nav class="nav">
         <ul>
           <li><a href="#" onclick="showPage('home')">Home</a></li>
-          <li><a href="#" onclick="showPage('about')">About</a></li>
+          <li><a href="#" onclick="showPage('about')">Why Us?</a></li>
           <li><a href="#" onclick="showPage('services')">Services</a></li>
 
-          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-          <li><a href="#" onclick="showPage('profile')">Profile</a></li>
+          <li><a href="#" onclick="showPage('media')">Media Tools</a></li>
+          <li><a href="#" onclick="showPage('profile')">Dr. Stephanie Wright, DO</a></li>
         </ul>
+      
       </nav>
+      <p style="padding-bottom: 10px;"><i>Helping girls achieve their highest potential through health </i> </p>
+    
+    </div>
     </div>
     <!-- Page Sections -->
     <section id="home" class="page active">
       <!-- Default visible page -->
       <div class="center-space">
         <h1 class="h1">
-          Welcome to Pediatric & Adolescent Gynecology of the Rocky Mountains
+          Welcome to Pediatric & Adolescent Gynecology <br>of the Rocky Mountains
         </h1>
         <h2>with Dr. Stephanie Wright, DO</h2>
       </div>
@@ -50,27 +54,129 @@
         </div>
         <img id="office2" src="./assets/doctorgraphic.svg" alt="" />
       </div>
+
+      <div  class="leopard" style="padding: 3rem; background-size: contain;">
+        <div style="height: 70px;"></div>
+
+        <h1>Mission Statement:</h1>
+      <p style="text-align: left; opacity: 100%; background-color: rgba(245, 245, 245, 0.659); padding: 2rem; border-radius: 10px;">
+        We aim to ease the discomfort of conversations around female specific
+        health issues in children and adolescents. Our goal is to create an environment which is friendly
+        and knowledgeable in the issues our daughters face regarding their growing and changing
+        reproductive systems. <br><br> From birth to adulthood, we address their physical and social needs to
+        allow them to grow, learn and perform at their highest potential.</p>
+        <div style="height: 200px;"></div>
+
+      </div>
     </section>
 
     <section id="about" class="page">
-      <h1>About Us</h1>
-      <p>Learn more about our company and team.</p>
+      
+      <div class="center-space" style="display:flex;">
+
+
+        <div  class="leopard">
+        <h1>Why Us?</h1>
+      <p style="text-align: left; opacity: 100%; background-color: rgba(245, 245, 245, 0.47); padding: 2rem; border-radius: 10px;">Pediatric Gynecologists are trained in Obstetrics and Gynecology however they have a special interest in
+        the care of girls and teens. <br><br>  <span class="bold italic">So,</span> <strong> what is it that sets us apart from any other Ob/Gyn with this interest?</strong><br><br> At
+        Little Women Pediatric &amp; Adolescent Gynecology, all we see are girls from birth up through college.
+        Therefore, when young women walk into our office, they know this is a place for them. We focus on the
+        whole child, from their scholastic endeavors to their athletic, musical or artistic ventures and how their
+        physical health affects their overall success.<br><br> 
+        <strong> Dr. Wright </strong>also had a strong desire to learn more about the care of girls with complex and sometimes
+        rare medical concerns. Therefore, she spent an extra year in training to learn about how different
+        complex medical concerns can impact reproductive development and health. <br><br> On the other side, she
+        learned how puberty can make a life with these complex concerns even more challenging. Her number
+        one focus is to help all girls with all their unique circumstances transition to a fulfilling and healthy adult
+        life, reaching their highest potential.</p>
+      </div>
+      <div class="carousel">
+        <img src="./assets/Office2.jpg" class="active" alt="Slide 1">
+        <img src="./assets/Office1.jpg" alt="Slide 2">
+        <img src="./assets/Office3.jpg" alt="Slide 3">
+      
+        <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+        <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+      </div>
+      </div>
+
     </section>
 
     <section id="services" class="page">
       <h1>Services</h1>
       <p>Here are the services we offer.</p>
+      <ul>
+        <li>Pre-pubertal Concerns
+          <ul>
+            <li>Vulvo-vaginitis</li>
+            <li>Precocious puberty</li>
+            <li>Vulvar dermatoses</li>
+            <li>Labial adhesions</li>
+            <li>Straddle injuries</li>
+            <li>Pelvic masses</li>
+            <li>Congenital abnormalities of the reproductive tract</li>
+          </ul>
+        </li>
+        
+        <li>Pubertal Concerns
+          <ul>
+            <li>Menstrual irregularities</li>
+            <li>Polycystic Ovarian Syndrome</li>
+            <li>Endometriosis and Pelvic pain</li>
+            <li>Menstrual suppression</li>
+            <li>Menstrual migraines</li>
+            <li>Acne assistance</li>
+            <li>Pelvic masses</li>
+            <li>Contraception</li>
+            <li>STD screening</li>
+            <li>Vulvar lesions</li>
+          </ul>
+        </li>
+        
+        <li>Gynecology for Special Populations
+          <ul>
+            <li>Anorectal malformations</li>
+            <li>Developmental Delay</li>
+            <li>Myelomeningocele</li>
+            <li>Congenital anomalies of the reproductive tract</li>
+          </ul>
+        </li>
+      </ul>
+      
     </section>
 
-    <section id="contact" class="page">
-      <h1>Contact</h1>
-      <p>Get in touch with us.</p>
+    <section id="media" class="page">
+      <ul>
+        <li><a href="https://www.youngwomenshealth.org" target="_blank">www.youngwomenshealth.org</a></li>
+        <li><a href="https://www.pullthrunetwork.org" target="_blank">www.pullthrunetwork.org</a></li>
+        <li><a href="https://www.mrkh.org" target="_blank">www.mrkh.org</a></li>
+        <li><a href="https://www.sbtween2teen.org" target="_blank">www.sbtween2teen.org</a></li>
+        <li><a href="https://www.kidshealth.org" target="_blank">www.kidshealth.org</a></li>
+        <li><a href="https://www.girlshealth.org" target="_blank">www.girlshealth.org</a></li>
+      </ul>
+      
     </section>
 
     <section id="profile" class="page">
       <h1>Profile</h1>
       <p>Your personal profile page.</p>
     </section>
+
+    <footer style="background-color: #f8f9fa; width: 100vw; padding: 20px; text-align: center;">
+      <h5>Where to Find Us</h5>
+      <p>2055 High Street, #320<br>Denver, CO 80205<br>Phone: 303-861-4480 <br>Fax:303-861-4490</p>
+      
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="#">Maps</a></li>
+        <li><a href="#">Hours of Operation</a></li>
+        <li><a href="#">Parking Info</a></li>
+        <li>Social Media: 
+          <a href="#">HelloHealth</a>, 
+          <a href="#">Facebook</a>, 
+          <a href="#">Health Taps</a>
+        </li>
+      </ul>
+    </footer>
 
     <script src="script.js"></script>
   </body>
