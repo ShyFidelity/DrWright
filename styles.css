@@ -58,12 +58,13 @@ body {
   background-image: var(--leopardCorner);
   background-repeat: no-repeat;
   background-position: right;
+  padding-top: 20px; 
 }
 
 nav {
   width: 100%;
   padding: 1rem;
-  padding-top: 2.9rem;
+
   justify-content: center;
   display: flex;
   align-items: center;
