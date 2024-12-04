@@ -8,42 +8,63 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <div class="nav-parent">
-      <div class="logo-div">
-        <img class="logo" src="./assets/Pediatric-logo.svg" alt="" />
-      </div>
-<div style="display: flex; flex-direction: column; align-items: center; margin-left: 150px;">
-      <nav class="nav">
-        <ul>
-          <li><a href="#" onclick="showPage('home')">Home</a></li>
-          <li><a href="#" onclick="showPage('about')">Why Us?</a></li>
-          <li><a href="#" onclick="showPage('services')">Services</a></li>
-          <li> <a href="#"onclick="showPage('find')">Find Us</a></li>
-          <li><a href="#" onclick="showPage('media')">Media Tools</a></li>
-          <li><a href="#" onclick="showPage('profile')">Dr. Stephanie Wright, DO</a></li>
-        </ul>
-      
-      </nav>
+<!-- Navigation Bar -->
+<div class="nav-parent">
+
+       <div class="logo-div">
+      <img class="logo" src="./assets/Pediatric-logo.svg" alt="Logo" />
+  </div>
+  <!-- Hamburger and Navigation Container -->
+  <div class="nav-container">
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav">
+
+      <ul>
+         <!-- Logo -->
+
     
-    </div>
-    </div>
+
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('about')">Why Us?</a></li>
+        <li><a href="#" onclick="showPage('services')">Services</a></li>
+        <li><a href="#" onclick="showPage('find')">Find Us</a></li>
+        <li><a href="#" onclick="showPage('media')">Media Tools</a></li>
+        <li><a href="#" onclick="showPage('profile')">Dr. Stephanie Wright, DO</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
     <!-- Page Sections -->
     <section id="home" class="page active">
       <!-- Default visible page -->
-      <div class="center-space">
-        <h1 class="h1">
+      <div class="center-row">
+        <div>
+        <h1 class="h1" style="width: 60%;">
           Welcome to Pediatric & Adolescent Gynecology <br>of the Rocky Mountains
         </h1>
         <h2>with Dr. Stephanie Wright, DO</h2>
       </div>
-      <div class="container">
+        <img id="office2" src="./assets/doctorgraphic.svg" alt="" />
+      </div>
+      <div class="container gradient-dark">
+        
+        <iframe src="https://www.youtube.com/embed/vwkAI__Yldc" allowfullscreen></iframe>
+
         <div class="div-text">
           <h1 class="h-light">About our practice</h1>
           <ul class="li-light">
             <li>Exclusive for Young Women</li>
             <br />
             <br />
-            <li>Holistic Child-Centered Care</li>
+            <li>Holistic Family-Centered Care</li>
             <br />
             <br />
             <li>Specialized in Complex Cases</li>
@@ -51,7 +72,7 @@
             <br />
           </ul>
         </div>
-        <img id="office2" src="./assets/doctorgraphic.svg" alt="" />
+
       </div>
 
       <div  class="leopard" style="padding: 3rem; background-size: contain;">
@@ -167,30 +188,37 @@
         <p style="margin-bottom: 10px;">Centennial, CO 80111</p>
         <p style="margin-bottom: 20px;">Phone: <a href="tel:3038614480" style="color: #2f0254; text-decoration: none;">303-861-4480</a></p>
 
-        <h2 style=" margin-bottom: 15px;">Maps</h2>
-        <p style="margin-bottom: 20px;">
-            <a href="https://goo.gl/maps/example" target="_blank" style="color:#2f0254; text-decoration: none;">View on Google Maps</a>
-        </p>
-
+        <h2 style=" margin-bottom: 15px;">Map</h2>
+        <iframe
+        src="https://www.google.com/maps/embed/v1/place?q=7180+E.+Orchard+Rd,+suite+101,+Centennial,+CO+80111&key=AIzaSyCOMxRG54m1Fb3t3_RO97eIJy09j13IHaI"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      
         <h2 style=" margin-bottom: 15px;">Hours of Operation</h2>
         <p style="margin-bottom: 0;">Monday - Thursday: 8:00 AM - 4:30 PM</p>
     </main>
 
 </div>
     </section>
-    <section id="media" class="page">
-      <ul>
-        <li><a href="https://www.youngwomenshealth.org" target="_blank">www.youngwomenshealth.org</a></li>
-        <li><a href="https://www.pullthrunetwork.org" target="_blank">www.pullthrunetwork.org</a></li>
-        <li><a href="https://www.mrkh.org" target="_blank">www.mrkh.org</a></li>
-        <li><a href="https://www.sbtween2teen.org" target="_blank">www.sbtween2teen.org</a></li>
-        <li><a href="https://www.kidshealth.org" target="_blank">www.kidshealth.org</a></li>
-        <li><a href="https://www.girlshealth.org" target="_blank">www.girlshealth.org</a></li>
-      </ul>
-      
+    <section id="media"  class="page">
+   <div class="media-row">
+        <div><a href="https://www.youngwomenshealth.org" target="_blank">www.youngwomenshealth.org</a></div>
+        <div><a href="https://www.pullthrunetwork.org" target="_blank">www.pullthrunetwork.org</a></div>
+        <div><a href="https://www.mrkh.org" target="_blank">www.mrkh.org</a></div>
+        <div><a href="https://www.kidshealth.org" target="_blank">www.kidshealth.org</a></div>
+
+      </div>
+      <divn class="media-row">
+     
+      </div>
     </section>
 
-    <section id="profile" class="page">
+    <section id="profile" class="page" style="padding-top: 3rem;">
       <h1>Profile</h1>
       <div class="box">
         <div class="profile-header">
@@ -242,7 +270,9 @@
       <p>7180 E. Orchard Rd, suite 101 <br>Centennial, CO 80111<br>Phone: 303-861-4480 <br>Fax:303-861-4490</p>
     </div>
       <ul class="li-light"   style="list-style: none; padding: 0; margin-bottom: 40px; color: white;">
-        <li><a href="#">Maps</a></li>
+        <a href="https://www.google.com/maps?q=7180+E.+Orchard+Rd,+suite+101,+Centennial,+CO+80111" target="_blank" style="color: white;">
+Map      </a>
+      
         <li style="font-size: 1.1rem; margin-top: 0.5rem;">Hours of Operation: Monday-Thursday 8:00am - 4:30pm MST</li>
         
         <li style="font-size: 1.1rem; margin-top: 0.5rem;"> Insurances we take: Aetna, BCBS, United, Tricare, Medicaid, CHP+/Colorado Access, Cigna, Kaiser

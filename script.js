@@ -33,3 +33,21 @@ function showPage(pageId) {
   function prevSlide() {
     showSlide(currentSlide - 1);
   }
+
+
+
+  function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    nav.classList.toggle('show');
+  }
+  
+  // Close the menu when a link is clicked
+  document.querySelectorAll('.nav ul li a').forEach((link) => {
+    link.addEventListener('click', () => {
+      const nav = document.querySelector('.nav');
+      nav.classList.remove('show');
+    });
+  });
+  
+  
+  // Example function to handle navigation (optional)
