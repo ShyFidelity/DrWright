@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr. Stephanie Wright, DO</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -28,9 +30,6 @@
 
       <ul>
          <!-- Logo -->
-
-    
-
         <li><a href="#" onclick="showPage('home')">Home</a></li>
         <li><a href="#" onclick="showPage('about')">Why Us?</a></li>
         <li><a href="#" onclick="showPage('services')">Services</a></li>
@@ -46,11 +45,14 @@
     <section id="home" class="page active">
       <!-- Default visible page -->
       <div class="center-row">
-        <div>
-        <h1 class="h1" style="width: 60%;">
+        <div class="header-text">
+        <h1 class="h1" >
           Welcome to Pediatric & Adolescent Gynecology <br>of the Rocky Mountains
         </h1>
-        <h2>with Dr. Stephanie Wright, DO</h2>
+        <h2 style="text-align: center;">with Dr. Stephanie Wright, DO</h2>
+
+
+      <div class="button-52"> <a href="https://portal.kareo.com/pp-webapp/" target="_blank" class="button-link">Patient Log-in</a> </div>
       </div>
         <img id="office2" src="./assets/doctorgraphic.svg" alt="" />
       </div>
@@ -74,20 +76,37 @@
         </div>
 
       </div>
+      <div style="background-color: white; padding: 2rem; display: flex; flex-wrap: wrap; align-items: center; flex-direction: column;">
+      <h2 style="font-weight: 600;">Insurances We Take</h2>
+      <div class="insurances"> <img src="/assets/Aetna_logo.svg.png" alt="" class="insurance-img">
+        <img src="/assets/BCBS.png" alt="" class="insurance-img">
+        <img src="/assets/CHP.png" alt="" class="insurance-img">
+        <img src="/assets/Cigna-Logo.png" alt="" class="insurance-img">
+        <img src="/assets/healthfirst-colorado-logo.webp" alt="" class="insurance-img">
+        <img src="/assets/kaiser.png" alt="" class="insurance-img">
+        <img src="/assets/UnitedHealthcare.png" alt="" class="insurance-img">
+        <img src="/assets/US-TRICARE-Logo.svg.png" alt="" class="insurance-img">
+      
+      
+      </div>
+    </div>
+      <div  class="leopard" style="padding: 3rem; background-size: cover; background-color: rgba(245, 245, 245, 0.77); ">
+        <div style="height: 2rem;">  </div>
 
-      <div  class="leopard" style="padding: 3rem; background-size: contain;">
-        <div style="height: 70px;"></div>
+<div style="height: 2rem;">  </div>
 
-        <h1>Mission Statement:</h1>
-      <p style="text-align: left; opacity: 100%; background-color: rgba(245, 245, 245, 0.77); padding: 2rem; border-radius: 10px;">
+      
+<div style="text-align: left; opacity: 100%; display: flex; align-items: center; flex-direction: column; background-color: rgba(245, 245, 245, 0.77); padding: 2rem; border-radius: 10px;">
+        <h2 style="font-weight: 600; ">Mission Statement</h2>
+      <p >
         We aim to ease the discomfort of conversations around female specific
         health issues in children and adolescents. Our goal is to create an environment which is friendly
         and knowledgeable in the issues our daughters face regarding their growing and changing
         reproductive systems. <br><br> From birth to adulthood, we address their physical and social needs to
         allow them to grow, learn and perform at their highest potential.</p>
-        <div style="height: 200px;"></div>
-
+    
       </div>
+    </div>
     </section>
 
     <section id="about" class="page">
@@ -114,6 +133,8 @@
         <img src="./assets/Office2.jpg" class="active" alt="Slide 1">
         <img src="./assets/Office1.jpg" alt="Slide 2">
         <img src="./assets/Office3.jpg" alt="Slide 3">
+
+
       
         <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
         <button class="carousel-btn next" onclick="nextSlide()">❯</button>
@@ -124,12 +145,11 @@
 
     <section id="services" class="page">
       <h1>Services</h1>
-      <p style="margin-bottom: 20px;">Here are the services we offer.</p>
       <div class="services-container">
         <div class="service-column">
           <ul>
-            <li>Pre-pubertal Concerns
-              <ul>
+            <h3>Pre-pubertal Concerns</h3>
+            <ul class="services-li">
                 <li>Vulvo-vaginitis</li>
                 <li>Precocious puberty</li>
                 <li>Vulvar dermatoses</li>
@@ -143,8 +163,8 @@
         </div>
         <div class="service-column">
           <ul>
-            <li>Pubertal Concerns
-              <ul>
+            <h3>Pubertal Concerns</h3>
+              <ul class="services-li">
                 <li>Menstrual irregularities</li>
                 <li>Polycystic Ovarian Syndrome</li>
                 <li>Endometriosis and Pelvic pain</li>
@@ -161,8 +181,8 @@
         </div>
         <div class="service-column">
           <ul>
-            <li>Gynecology for Special Populations
-              <ul>
+            <h3>Gynecology for Special Populations</h3>
+              <ul class="services-li">
                 <li>Anorectal malformations</li>
                 <li>Developmental Delay</li>
                 <li>Myelomeningocele</li>
@@ -266,16 +286,16 @@
     <div style="color: white;"> 
       <p style="padding-bottom: 10px; text-align: center; margin: 20px;"><i>"Helping girls achieve their highest potential through health." </i> </p>
 
-      <h5 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Where to Find Us:</h5>
-      <p>7180 E. Orchard Rd, suite 101 <br>Centennial, CO 80111<br>Phone: 303-861-4480 <br>Fax:303-861-4490</p>
+      <h5 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-family: Open Sans, Arial, Helvetica, sans-serif;">Where to Find Us:</h5>
+      <p style="font-size: 1.1rem; margin-bottom: 0.5rem; font-family: Open Sans, Arial, Helvetica, sans-serif;"> 7180 E. Orchard Rd, suite 101 <br>Centennial, CO 80111<br>Phone: 303-861-4480 <br>Fax:303-861-4490</p>
     </div>
       <ul class="li-light"   style="list-style: none; padding: 0; margin-bottom: 40px; color: white;">
-        <a href="https://www.google.com/maps?q=7180+E.+Orchard+Rd,+suite+101,+Centennial,+CO+80111" target="_blank" style="color: white;">
+        <a href="https://www.google.com/maps?q=7180+E.+Orchard+Rd,+suite+101,+Centennial,+CO+80111" target="_blank" style="font-size: 1.1rem; margin-bottom: 0.5rem; font-family: Open Sans, Arial, Helvetica, sans-serif; color: white;">
 Map      </a>
       
-        <li style="font-size: 1.1rem; margin-top: 0.5rem;">Hours of Operation: Monday-Thursday 8:00am - 4:30pm MST</li>
+        <li style="font-size: 1.1rem; margin-top: 0.5rem; font-size: 1.1rem; margin-bottom: 0.5rem; font-family: Open Sans, Arial, Helvetica, sans-serif;"">Hours of Operation: Monday-Thursday 8:00am - 4:30pm MST</li>
         
-        <li style="font-size: 1.1rem; margin-top: 0.5rem;"> Insurances we take: Aetna, BCBS, United, Tricare, Medicaid, CHP+/Colorado Access, Cigna, Kaiser
+        <li style="font-size: 1.1rem; margin-top: 0.5rem; font-size: 1.1rem; margin-bottom: 0.5rem; font-family: Open Sans, Arial, Helvetica, sans-serif;""> Insurances we take: Aetna, BCBS, United, Tricare, Medicaid, CHP+/Colorado Access, Cigna, Kaiser
         </li>
       </ul>
     </footer>
