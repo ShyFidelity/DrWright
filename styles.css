@@ -567,8 +567,9 @@ background: linear-gradient(0deg, rgba(13,40,105,0.3071822478991597) 0%, rgba(47
 
 
 .insurance-img {
-  max-width: 120px;
-  height: auto;
+
+  width: auto;
+  height: 35px;
 }
 
 .insurances {
