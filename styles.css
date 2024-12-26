@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gothic+A1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
 :root {
@@ -8,6 +8,7 @@
   --secondary-color: #423142;
   --accent-color: #ab989d;
   --background-color: #f5f5f5;
+  --section-bg: #e7868682;
   --text-color: #333333;
   --dark-bg: #2f0254e7;
   --leopard: url(./assets/leopard.svg);
@@ -28,11 +29,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e7868682;
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+}
+
+.section-bg {
+  background-color: var(--section-bg);
 }
 
 .container {
@@ -51,6 +54,10 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 
@@ -93,6 +100,52 @@ body {
   background-color: var(--dark-bg); /* Set a color that contrasts with the background */
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
+}
+
+.media-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Or space-around if preferred */
+  margin: 20px -10px; /* Add top and bottom margins */
+  max-width: 1000px;
+}
+
+.media-card {
+  flex: 1 0 0;
+  width: 280px; /* Adjust as needed */
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Center content WITHIN the card */
+}
+
+.media-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.media-card a {
+  color: var(--secondary-color);
+}
+
+.media-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.media-card h4 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  margin-bottom: 5px;
 }
 
 /* Hide hamburger menu on larger screens */
@@ -159,6 +212,42 @@ margin-left: auto;
 
 .nav ul li a:hover {
   color: #f000a0;
+}
+
+.why-card {
+  width: 350px;
+  border-radius: 12px; /* More rounded corners */
+  display: flex;
+  flex-direction: row; /* Stack content vertically */
+  align-items: flex-start; /* Align content to the left */
+  text-align: left;
+  padding: 20px; /* Increased padding */
+  margin: 20px; /* Added margin for spacing */
+  background-color: #ffffff; /* Dark background color */
+  color: #080202; /* Light text color for contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+.why-card:hover {
+  transform: translateY(-8px); /* Increased hover lift */
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25); /* Stronger hover shadow */
+    background-color: #4f3b4f15; /* Slightly lighter background on hover */
+}
+
+/* Example styling for content within the card */
+.why-card h3 {
+  margin-top: 0; /* Remove default top margin */
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #eee; /* Slightly lighter heading color */
+}
+
+.why-card p {
+  line-height: 1.6; /* Improved line height for readability */
+  margin-bottom: 15px;
+  font-size: 14px;
 }
 
 .header-text {
@@ -230,6 +319,7 @@ h1 {
   margin-bottom: 2rem;
   font-size: 2.5rem;
   text-align: left;
+  
 }
 
 .h-light {
@@ -287,7 +377,7 @@ a {
 }
 
 .li-light > li {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
   letter-spacing: 3px;
   font-size: 1.5rem;
@@ -317,7 +407,9 @@ h1 {
 
 h2 {
   font-family: "Comfortaa", sans-serif;
-
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
   font-weight: 300;
   color: var(--secondary-color);
 }
@@ -339,44 +431,47 @@ h5 {
 
 .carousel {
   position: relative;
-  width: 80%;
-  max-width: 450px;
-  max-height: 450px;
-  margin: auto;
+  width: 500px;
+  max-width: 500px;
+  height: 400px; /* Set a fixed height for better control */
+  margin: 20px auto; /* Center the carousel */
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(28, 3, 69, 0.259);
-  transition: ease-in-out 300s;
-  border: 5px #2f0254 solid;
-  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Softer, more modern shadow */
+  border-radius: 12px; /* Smoother rounded corners */
 }
 
-/* Carousel images */
 .carousel img {
   width: 100%;
+  height: 100%; /* Make images fill the carousel */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
   position: absolute;
-
+  top: 0; /* Align images to the top */
+  left: 0; /* Align images to the left */
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-/* Show the active image */
 .carousel img.active {
   opacity: 1;
-  position: relative;
+  position: relative; /* Remove absolute positioning when active */
 }
 
-/* Navigation buttons */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 24px;
   color: #fff;
-  background-color: rgba(56, 14, 86, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Darker background for better contrast */
   border: none;
-  padding: 10px;
+  padding: 10px 15px; /* Adjust padding for better button shape */
   cursor: pointer;
-  border-radius: 100px;
+  border-radius: 5px; /* Less rounded buttons */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0,0,0,0.7);
 }
 
 .prev {
@@ -385,6 +480,29 @@ h5 {
 
 .next {
   right: 10px;
+}
+
+/* Optional: Add indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border: none;
+}
+
+.carousel-indicator.active {
+  background-color: #fff;
 }
 
 #services {
@@ -493,15 +611,6 @@ h5 {
 }
 
 
-
-
-
-.media-row {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
 .center-row {
   flex-wrap: wrap;
   display: flex;
@@ -570,6 +679,7 @@ background: linear-gradient(0deg, rgba(13,40,105,0.3071822478991597) 0%, rgba(47
 
   width: auto;
   height: 35px;
+  margin-left: 20px;
 }
 
 .insurances {
@@ -588,7 +698,44 @@ background: linear-gradient(0deg, rgba(13,40,105,0.3071822478991597) 0%, rgba(47
 
 
 
+.content {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--background-color);
+  border-radius: 8px;
+}
 
+.content p {
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.alternate-bg:nth-child(even) {
+  background-color: var(--section-bg);
+  padding: 10px 15px;
+}
+
+.alternate-bg:nth-child(odd) {
+  padding: 10px 15px;
+}
+
+.content span {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.content em {
+  font-style: italic;
+  color: var(--secondary-color);
+}
 
 
 
