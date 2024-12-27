@@ -215,7 +215,7 @@ h4 {
 }
 
 .nav ul li a:hover {
-  color: #f000a0;
+  color: var(--primary-color);
 }
 
 .why-bg {
@@ -528,41 +528,64 @@ h5 {
 }
 
 #services {
-  padding: 20px;
+  background-color: var(--background-color);
 }
 
-#services h1 {
-  text-align: center;
-}
+
 
 .services-container {
-  display: flex;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  padding-left: 10%;
+  padding-right:10%;
+
+}
+
+@media (min-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .service-column {
-  background: #f9f9f9ac;
+  background: #ffffff;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-column ul {
-  list-style-type: circle;
-  padding: 0;
+.service-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.service-column > ul > li {
+.service-column h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
   font-family: "Comfortaa", cursive;
-  font-size: 18px;
-  margin-bottom: 10px;
 }
 
-.service-column ul ul {
-  margin-top: 5px;
-  padding-left: 15px;
-  font-size: 16px;
+.services-li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-li li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  padding: 0.5rem;
+  border-left: 4px solid var(--accent-color);
+  background-color: var(--section-bg);
+  border-radius: 5px;
 }
 
 .box {
@@ -769,4 +792,31 @@ iframe {
   background-image: url(assets/office.png);
   background-position: top;
   background-repeat: no-repeat;
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 1em;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
 }
