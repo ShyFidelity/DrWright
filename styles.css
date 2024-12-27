@@ -75,6 +75,24 @@ body {
   justify-content: space-between;
 }
 
+
+.nav-button {
+ background-color: #ab989d50;
+ padding: 1rem; 
+ border-radius: 15px;
+ border-top-right-radius: 0;
+ border-bottom: 1px solid var(--secondary-color);
+ border-right: 1px solid var(--secondary-color);
+
+ transition: transform 0.2s ease, border 0.2s ease; /* Smooth transition for the transform and border */
+
+}
+
+.nav-button:hover {
+  border: 0;
+  transform: translateY(-2px);
+  color: var(--secondary-color);
+}
 /* Hide hamburger menu on larger screens */
 @media (max-width: 768px) {
   .logo-div {
